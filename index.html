@@ -10,13 +10,13 @@
   <div class="container">
     <header class="main-header clearfix">
       <a class="logo" href="index.html">device</a>
-      <div class="controls-left">
+      <div class="controls-left clearfix">
         <form class="search" action="#" method="get">
           <input class="search-field" type="search" name="search-field" placeholder="Поиск по сайту">
           <button class="search-btn" type="submit">Найти</button>
         </form>
       </div>
-      <ul class="controls-right">
+      <ul class="controls-right clearfix">
         <li class="controls-right-item">
           <a class="controls-right-link" href="#">Корзина</a>
         </li>
@@ -36,30 +36,29 @@
       <nav>
         <ul class="navigation-list clearfix">
           <li class="navigation-item">
-            <a class="navigation-link" href="navigation-link-list">каталог товаров</a>
+            <a class="navigation-link" href="catalog.html">каталог товаров</a>
             <ul class="navigation-submenu-list clearfix">
               <li class="navigation-submenu-item">
-                <a class="navigation-submenu-link" href="catalog.html">Виртуальная реальность</a></li>
+                <a class="navigation-submenu-link" href="catalog.html">Виртуальная реальность</a>
+                <a class="navigation-submenu-link" href="catalog.html">Фитнес-браслеты</a>
+                <a class="navigation-submenu-link" href="catalog.html">Квадрокоптеры</a>
+              </li>
               <li class="navigation-submenu-item">
-                <a class="navigation-submenu-link" href="catalog.html">Фитнес-браслеты</a></li>
-              <li class="navigation-submenu-item">
-                <a class="navigation-submenu-link" href="catalog.html">Квадрокоптеры</a></li>
-              <li class="navigation-submenu-item">
-                <a class="navigation-submenu-link" href="catalog.html">Моноподы для селфи</a></li>
-              <li class="navigation-submenu-item">
-                <a class="navigation-submenu-link" href="catalog.html">Умные часы</a></li>
+                <a class="navigation-submenu-link" href="catalog.html">Моноподы для селфи</a>
+                <a class="navigation-submenu-link" href="catalog.html">Умные часы</a>
+              </li>
               <li class="navigation-submenu-item">
                 <a class="navigation-submenu-link" href="catalog.html">Экшн-камеры</a></li>
             </ul>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">доставка</a>
+            <a class="navigation-link" href="index.html#first-item-deliveri">доставка</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">гарантия</a>
+            <a class="navigation-link" href="index.html#second-item-guarantees">гарантия</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">контакты</a>
+            <a class="navigation-link" href="index.html#contacts-anchor">контакты</a>
           </li>
         </ul>
       </nav>
@@ -71,17 +70,11 @@
           <input class="slider-one" type="radio" name="gadget" value="first-slider" id="slider-one" checked>
           <input class="slider-two" type="radio" name="gadget" value="second-slider" id="slider-two">
           <input class="slider-three" type="radio" name="gadget" value="third-slider" id="slider-three">
-          <ul class="main-slider-block-control clearfix">
-            <li class="main-slider-label-block">
-              <label class="main-slider-label-item" for="slider-one"></label>
-            </li>
-            <li class="main-slider-label-block">
-              <label class="main-slider-label-item" for="slider-two"></label>
-            </li>
-            <li class="main-slider-label-block">
-              <label class="main-slider-label-item" for="slider-three"></label>
-            </li>
-          </ul>
+          <div class="main-slider-block-control clearfix">
+            <label class="main-slider-label-item" for="slider-one"></label>
+            <label class="main-slider-label-item" for="slider-two"></label>
+            <label class="main-slider-label-item" for="slider-three"></label>
+          </div>
           <div class="main-slider-list clearfix">
             <div class="first-slider-content" data-slide-number="01">
               <div class="layout-column-left">
@@ -99,11 +92,11 @@
                   </p>
                 </div>
                 <div class="slider-link">
-                  <a class="btn-standart btn-more-info" href="catalog.html">Подробнее</a>
+                  <a class="btn-standart btn-more-info" href="catalog.html"><span>Подробнее</span></a>
                 </div>
                 <ul class="slider-features">
                   <li class="slide-feature">
-                    <span class="slide-feature-value">8,5 м</span>
+                    <span class="slide-feature-value">8,5 м</span><br>
                     <span class="slide-feature-option">Длина палки</span>
                   </li>
                   <li class="slide-feature">
@@ -132,7 +125,7 @@
                   </p>
                 </div>
                 <div class="slider-link">
-                  <a class="btn-standart btn-more-info" href="catalog.html">Подробнее</a>
+                  <a class="btn-standart btn-more-info" href="catalog.html"><span>Подробнее</span></a>
                 </div>
                 <ul class="slider-features">
                   <li class="slide-feature">
@@ -157,7 +150,7 @@
                   </p>
                 </div>
                 <div class="slider-link">
-                  <a class="btn-standart btn-more-info" href="catalog.html">Подробнее</a>
+                  <a class="btn-standart btn-more-info" href="catalog.html"><span>Подробнее</span></a>
                 </div>
                 <ul class="slider-features">
                   <li class="slide-feature">
@@ -165,7 +158,7 @@
                     <span class="slide-feature-option">Дальность полета</span>
                   </li>
                   <li class="slide-feature">
-                    <span class="slide-feature-value">50 м</span>
+                    <span class="slide-feature-value">50 м</span><br>
                     <span class="slide-feature-option">Радиус поражения</span>
                   </li>
                 </ul>
@@ -174,8 +167,8 @@
           </div>
         </article>
       </div>
-      <article class="main-content-product">
-        <div class="container">
+      <div class="container">
+        <article class="main-content-product">
           <ul class="main-content-product-list clearfix">
             <li class="main-content-product-item">
               <a class="main-content-product-link" href="catalog.html">
@@ -226,8 +219,8 @@
               </a>
             </li>
           </ul>
-        </div>
-      </article>
+        </article>
+      </div>
       <article class="main-content-service clearfix">
         <div class="container">
           <input class="deliveri-features" type="radio" name="service-item" value="item-first" id="deliveri-features" checked>
@@ -239,7 +232,7 @@
             <label class="btn-standart btn-control" for="credit-features">кредит</label>
           </div>
           <div class="service-content">
-            <div class="first-item-content clearfix">
+            <div class="first-item-content" id="first-item-deliveri" clearfix>
               <div class="layout-left">
                 <h2>Доставка</h2>
                 <p>
@@ -250,7 +243,7 @@
                 <img src="img/img-delivery.png" height="164" width="136" alt="Быстрая доставка">
               </div>
             </div>
-            <div class="second-item-content  clearfix">
+            <div class="second-item-content" id="second-item-guarantees" clearfix>
               <div class="layout-left">
                 <h2>Гарантия</h2>
                 <p>
@@ -261,7 +254,7 @@
                 <img src="img/img-warranty.png" height="195" width="171" alt="Железная гарантия">
               </div>
             </div>
-            <div class="third-item-content  clearfix">
+            <div class="third-item-content" id="third-item-credit" clearfix>
               <div class="layout-left">
                 <h2>Кредит</h2>
                 <p>
@@ -277,46 +270,28 @@
       </article>
       <div class="container">
         <div class="main-content-logo">
-          <ul class="main-content-logo-list-gray clearfix">
-            <li class="main-content-logo-item">
-              <div class="main-content-logo-block">
-                <img class="main-content-logo-picture-gray" src="img/img-logo-1.png" height="100" width="260" alt="Логотип DJI">
-              </div>
-            </li>
-            <li class="main-content-logo-item">
-              <div class="main-content-logo-block">
-                <img class="main-content-logo-picture-gray" src="img/img-logo-2.png" height="100" width="260" alt="Логотип SP Gadgets">
-              </div>
-            </li>
-            <li class="main-content-logo-item">
-              <div class="main-content-logo-block">
-                <img class="main-content-logo-picture-gray" src="img/img-logo-3.png" height="100" width="260" alt="Логотип GoPro">
-              </div>
-            </li>
-            <li class="main-content-logo-item">
-              <div class="main-content-logo-block">
-                <img class="main-content-logo-picture-gray" src="img/img-logo-4.png" height="100" width="260" alt="Логотип Vive">
-              </div>
-            </li>
-          </ul>
           <ul class="main-content-logo-list clearfix">
             <li class="main-content-logo-item">
               <div class="main-content-logo-block">
+                <img class="main-content-logo-picture-gray" src="img/img-logo-1.png" height="100" width="260" alt="Логотип DJI">
                 <img class="main-content-logo-picture" src="img/img-color-logo-1.png" height="100" width="260" alt="Логотип DJI">
               </div>
             </li>
             <li class="main-content-logo-item">
               <div class="main-content-logo-block">
+                <img class="main-content-logo-picture-gray" src="img/img-logo-2.png" height="100" width="260" alt="Логотип SP Gadgets">
                 <img class="main-content-logo-picture" src="img/img-color-logo-2.png" height="100" width="260" alt="Логотип SP Gadgets">
               </div>
             </li>
             <li class="main-content-logo-item">
               <div class="main-content-logo-block">
+                <img class="main-content-logo-picture-gray" src="img/img-logo-3.png" height="100" width="260" alt="Логотип GoPro">
                 <img class="main-content-logo-picture" src="img/img-color-logo-3.png" height="100" width="260" alt="Логотип GoPro">
               </div>
             </li>
             <li class="main-content-logo-item">
               <div class="main-content-logo-block">
+                <img class="main-content-logo-picture-gray" src="img/img-logo-4.png" height="100" width="260" alt="Логотип Vive">
                 <img class="main-content-logo-picture" src="img/img-color-logo-4.png" height="100" width="260" alt="Логотип Vive">
               </div>
             </li>
@@ -344,7 +319,7 @@
               <a class="btn-standart btn-about" href="#">подробнее о нас</a>
             </div>
           </div>
-          <div class="layout-column-right">
+          <div class="layout-column-right" id="contacts-anchor">
             <div class="column-description">
               <h2>Контакты</h2>
               <p>
@@ -365,11 +340,11 @@
               <form class="form-description clearfix" action="#" method="post">
                   <label for="#name-field" class="name-field-item">Ваше имя:</label>
                   <label for="#email-field-field" class="email-field-item">Ваш e-mail:</label>
-                  <input class="name-field" id="name-field" type="text" name="name-field" placeholder="Представьтесь,пожалуйста" pattern="^[a-zA-Z]+$" required>
-                  <input class="email-field" id="email-field" type="email" name="email-field" placeholder="Для отправки ответа" pattern="[A-Z,a-z,0-9]1-10[@]1[A-Z,a-z,0-9]1-10[.]1C2-3" required>
+                  <input class="name-field" id="name-field" type="text" name="name-field" placeholder="Представьтесь,пожалуйста" pattern="^[a-zA-Zа-яА-Я]+$" required>
+                  <input class="email-field" id="email-field" type="email" name="email-field" placeholder="Для отправки ответа" required>
                   <label for="#email-field-field" class="comment-field-item">Текст письма:</label>
                   <textarea class="comment-field" name="comment" id="comment-field" rows="5" cols="53" placeholder="В свободной форме"></textarea>
-                  <button class="btn-standart btn-default" type="submit">отправить</button>
+                  <button class="btn-standart btn-default" type="submit"><span>отправить</span></button>
                   <a href="#close-modal" title="" class="close-modal"></a>
               </form>
             </div>
@@ -383,12 +358,12 @@
           <div class="main-footer-logo">
             <a class="main-footer-logo-link" href="index.html">device</a>
           </div>
-          <ul class="main-footer-controls-top-list">
-            <li class="main-footer-controls-top-item">
-              <a class="main-footer-controls-top-link" href="#">Корзина</a>
+          <ul class="controls-right clearfix">
+            <li class="controls-right-item">
+              <a class="controls-right-link" href="#">Корзина</a>
             </li>
-            <li class="main-footer-controls-top-item">
-              <a class="main-footer-controls-top-link" href="#">Сравнить</a>
+            <li class="controls-right-item">
+              <a class="controls-right-link" href="#">Сравнить</a>
             </li>
             <li class="user-block">
               <div class="user-block-logged">
@@ -405,13 +380,13 @@
           <span class="main-footer-adress">г.Москва,ул.Строителей,15</span>
           <ul class="main-footer-navigation-list clearfix">
             <li class="main-footer-navigation-item">
-              <a class="main-footer-navigation-link" href="#">доставка</a>
+              <a class="main-footer-navigation-link" href="index.html#first-item-deliveri">доставка</a>
             </li>
             <li class="main-footer-navigation-item">
-              <a class="main-footer-navigation-link" href="#">гарантия</a>
+              <a class="main-footer-navigation-link" href="index.html#second-item-guarantees">гарантия</a>
             </li>
             <li class="main-footer-navigation-item">
-              <a class="main-footer-navigation-link" href="#">контакты</a>
+              <a class="main-footer-navigation-link" href="index.html#contacts-anchor">контакты</a>
             </li>
           </ul>
           <div class="main-footer-phone">
@@ -420,9 +395,9 @@
         </section>
         <section class="main-footer-bottom clearfix">
           <ul class="main-footer-social-list">
-            <li class="main-footer-social-item"><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
-            <li class="main-footer-social-item"><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
+            <li class="main-footer-social-item"><a class="social-btn social-btn-fb" href="#"></a></li>
+            <li class="main-footer-social-item"><a class="social-btn social-btn-inst" href="#"></a></li>
+            <li class="main-footer-social-item"><a class="social-btn social-btn-tw" href="#"></a></li>
           </ul>
           <a class="main-footer-copyright-btn" href="https://htmlacademy.ru/"><img class="main-footer-copyright-btn-picture" src="img/bg-logo-htmlacademy.png" width="27" height="34"></a>
         </section>
