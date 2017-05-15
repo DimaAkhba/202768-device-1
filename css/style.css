@@ -414,7 +414,6 @@ body {
   margin: 0;
   padding: 0;
   min-height: 590px;
-  outline: 1px solid red;
 }
 
 .main-slider-list {
@@ -600,19 +599,18 @@ body {
 .main-content-product {
   margin: 0;
   padding: 0;
+  margin-bottom: 200px;
 }
 
 .main-content-product .main-content-product-list {
   margin: 0;
   padding: 0;
-  width: 1160px;
 }
 
 .main-content-product-list .main-content-product-item {
   float: left;
   width: 160px;
   margin-right: 40px;
-  outline: 1px solid red;
 }
 
 .main-content-product-list .main-content-product-item:last-of-type {
@@ -654,8 +652,7 @@ body {
 /*--BEGIN main-content-service--*/
 .main-content-service {
   position: relative;
-  margin-top: 500px;
-  height: 290px;
+  min-height: 290px;
   background-color: #e6e6e6;
 }
 
@@ -1303,7 +1300,6 @@ body {
 }
 
 .main-content-middle {
-  height: 70px;
   margin-top: 20px;
   background-image: linear-gradient(to right, #dbdbdb 50%, #ebebeb 50%, #ebebeb);
 }
@@ -1436,8 +1432,50 @@ body {
   content: "";
   border-top: 2px solid #000000;
 }
-/*этот ползунок делаяться только с помощью JAVAScript?*/
-.filter-type-range {
+
+.filter-type-range-option {
+  display: none;
+}
+
+.buttons-range .button {
+  position: absolute;
+  width: 5px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.button.button-after {
+  left: 100px;
+}
+
+.button.button-after::after,
+.button.button-before::after {
+  position: absolute;
+  content: "";
+  left: 14px;
+  width: 90px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.button.button-before::after {
+  border-top: 1px solid #91c92f;
+}
+
+.button.button-after::before,
+.button.button-before::before {
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  width: 60px;
+}
+
+.button.button-after::before {
+  content: "до 5000";
+}
+
+.button.button-before::before {
+  content: "от 0";
 }
 
 .main-content-bottom .filter-type-checkbox{
@@ -1576,7 +1614,7 @@ body {
   background-color: #ffffff;
 }
 
-.main-content-product {
+.main-content-ware {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1586,30 +1624,66 @@ body {
   margin-bottom: 50px;
 }
 
-.main-content-product:nth-of-type(1),
-.main-content-product:nth-of-type(3) {
+.main-content-ware:last-of-type::before {
+  position: absolute;
+  content: "";
+  z-index: 500;
+  top: 20px;
+  left: 280px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #d6d6d6;
+}
+
+.main-content-ware:last-of-type::after {
+  position: absolute;
+  content: "new";
+  z-index: 500;
+  top: 37px;
+  left: 292px;
+  color: #d6d6d6;
+  font-family: "Gilroy", "Arial" , sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.main-content-ware:nth-of-type(1),
+.main-content-ware:nth-of-type(3) {
   box-sizing: border-box;
   margin-left: 72px;
   margin-right: 40px;
 }
 
-.main-content-product:nth-of-type(1),
-.main-content-product:nth-of-type(2) {
+.main-content-ware:nth-of-type(1),
+.main-content-ware:nth-of-type(2) {
   box-sizing: border-box;
   margin-top: 70px;
 }
 
-.main-content-product:nth-of-type(2),
-.main-content-product:nth-of-type(4) {
+.main-content-ware:nth-of-type(2),
+.main-content-ware:nth-of-type(4) {
   float: right;
 }
 
-.main-content-product .picture-item {
+.main-content-ware .picture-item {
   width: 360px;
   height: 380px;
 }
 
+.picture-item:hover {
+  cursor: pointer;
+}
+
+.picture-item:hover ~.picture-action .btn-default,
+.picture-item:hover ~.picture-action .btn-basket {
+  display: block;
+}
+
 .btn-default {
+  display: none;
   position: absolute;
   top: 220px;
   left: 100px;
@@ -1618,30 +1692,35 @@ body {
 }
 
 .btn-default:hover {
+  display: block;
   opacity: 1;
 }
 
 .btn-default:active {
+  display: block;
   opacity: 0.3;
 }
 
-.btn-standart.btn-basket {
+.btn-basket {
+  display: none;
   position: absolute;
   width: 200px;
-  top: 170px;
+  top: 150px;
   left: 80px;
   cursor: pointer;
 }
 
-.btn-basket:active span{
+.btn-standart.btn-basket:active {
+  display: block;
   opacity: 0.3;
 }
 
-.btn-standart.btn-basket:active {
+.btn-standart.btn-basket:hover {
+  display: block;
   background: #f0c52e;
 }
 
-.main-content-product .description-link {
+.main-content-ware .description-link {
   float: left;
   width: 260px;
   margin-top: 15px;
@@ -1652,7 +1731,7 @@ body {
   color: #000000;
 }
 
-.main-content-product .price {
+.main-content-ware .price {
   float: right;
   width: 100px;
   text-align: right;
